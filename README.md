@@ -52,9 +52,8 @@ Ikuti instruksi ini untuk menjalankan proyek di komputer lokal.
 Berikut adalah demonstrasi tampilan antarmuka BIMAV2.
 
 <img width="1822" height="1024" alt="Screenshot 2025-12-05 100618" src="https://github.com/user-attachments/assets/29da891c-1486-47d7-b20c-fa9efb1ba658" />
-![Screen Recording 2025-12-05 100924](https://github.com/user-attachments/assets/5731f9eb-4d9d-4c22-a9d2-f86d050fef61)
 
-
+67
 
 
 ---
