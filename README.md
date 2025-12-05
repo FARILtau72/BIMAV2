@@ -58,7 +58,7 @@ Contoh respons:
 ## 🛠️ Teknologi
 
 - **AI Backend**: Kolosal AI (`https://api.kolosal.ai/v1`) + model **Claude Sonnet 4.5**  
-- **Frontend**: HTML5 + JavaScript Vanilla  
+- **Frontend**: HTML5 + JavaScript
 - **Styling**: Tailwind CSS  
 - **Animasi**: CSS Transforms & Transitions  
 - **Deployment**: Server lokal (Python/Node.js)  
