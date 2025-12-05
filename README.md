@@ -11,90 +11,94 @@
 
   <br><br>
 
-  <h3>💡 Asisten UMKM yang cerdas, ringan, dan jalan lancar di HP — via Kolosal + Claude Sonnet</h3>
-</div>
 
 ---
 
-## 🧠 Apa Itu BIMAV2?
+## Quickstart
 
-**BIMAV2** adalah chatbot lokal untuk **pelaku Usaha Mikro, Kecil, dan Menengah (UMKM)** di Indonesia, dikembangkan oleh **Faril, Zhafran, dan Dandi**.  
+Ikuti instruksi ini untuk menjalankan proyek di komputer lokal.
 
-Chatbot ini menggunakan:
-- **Kolosal AI** sebagai gateway API  
-- **Model Claude Sonnet 4.5** sebagai mesin AI inti  
+**Prasyarat**
 
-Dengan kombinasi ini, BIMAV2 mampu:
-- Memberi saran keuangan & tips bisnis  
-- Membantu pencatatan transaksi harian  
-- Menjawab pertanyaan seputar usaha mikro  
-- Berkomunikasi dalam **Bahasa Indonesia santai**  
-- Menyapa dengan **"Mas/Mbak"** dan selalu menutup dengan **emotikon + kata penyemangat**  
+* Python 3.8 atau lebih baru
+* Pip (Package Installer for Python)
 
-Contoh respons:
-> Hai, Mas! 😊  
-> • Catat semua pemasukan, meski cuma Rp2.000  
-> • Jangan campur uang usaha dan uang pribadi  
-> • Coba buat target harian biar makin semangat  
-> Usaha Mas pasti makin laris! 💪💡✨
+**Instalasi**
 
----
+1.  Clone repository:
+    ```bash
+    git clone [https://github.com/FARILtau72/BIMAV2.git](https://github.com/FARILtau72/BIMAV2.git)
+    ```
 
-## ✨ Fitur Utama
+2.  Masuk ke folder:
+    ```bash
+    cd BIMAV2
+    ```
 
-| Fitur | Deskripsi |
-|------|-----------|
-| 🤖 **AI via Kolosal + Claude** | Menggunakan **Kolosal AI** sebagai penyedia akses ke **Claude Sonnet 4.5** |
-| 📱 **Mobile-First** | Dioptimalkan untuk HP; tidak perlu install — buka langsung di browser |
-| 🌓 **Toggle Tema** | Ganti antara tema gelap & terang sesuai suasana hati |
-| 💬 **Chat 3D Ringan** | Riwayat chat dengan efek 3D minimalis (CSS-based) |
-| 🎞️ **Footer Animatif** | Footer beranimasi menggunakan video lokal (bukan YouTube) |
-| 🏷️ **Bisa Dinamai** | Atur nama chatbot sesuai UMKM Anda (misal: "Kopi Kita AI") |
-| 🧼 **Kode Minimal** | Target <500 baris — ringkas, cepat, mudah dikembangkan |
-| 🚫 **Tanpa PWA** | Tidak pakai PWA — langsung jalan via `localhost` atau jaringan lokal |
+3.  Instal kebutuhan sistem:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  Jalankan aplikasi:
+    ```bash
+    python main.py
+    ```
 
 ---
 
-## 🛠️ Teknologi
+## Screenshot / Short Video Gif Demo
 
-- **AI Backend**: Kolosal AI (`https://api.kolosal.ai/v1`) + model **Claude Sonnet 4.5**  
-- **Frontend**: HTML5 + JavaScript
-- **Styling**: Tailwind CSS  
-- **Animasi**: CSS Transforms & Transitions  
-- **Deployment**: Server lokal (Python/Node.js)  
-- **File Support**: (Opsional) teks, PDF, gambar, video (untuk konteks tambahan)  
-- **Tidak Menggunakan**: React, Vue, YouTube, Cloud Storage, PWA  
+Berikut adalah demonstrasi tampilan antarmuka BIMAV2.
+
+![Dashboard Preview](https://via.placeholder.com/800x450?text=Preview+Dashboard+BIMAV2)
 
 ---
 
-## 🚀 Cara Menjalankan
+## Feature List
 
-1. Clone repositori:
-   ```bash
-   git clone https://github.com/FARILtau72/BIMAV2.git
-   cd BIMAV2
+* **Integrasi Python:** Backend yang efisien untuk pemrosesan data.
+* **Antarmuka HTML/CSS:** Desain frontend yang responsif dan ringan.
+* **Struktur Modular:** Kode yang terorganisir untuk kemudahan pengembangan.
+* **Log Sistem:** Pencatatan aktivitas sistem secara real-time.
 
-2. Siapkan kunci API:
-Daftar di https://app.kolosal.ai/id
-Simpan KOLOSAL_API_KEY di file .env atau langsung di backend (untuk demo)
-Jalankan server lokal:
-# Python
-python -m http.server 8000
+---
 
-# Atau Node.js
-npx serve
-bash
-12345
-Akses dari HP:
-Pastikan HP dan PC dalam satu jaringan Wi-Fi
-Buka browser HP → http://[IP-PC-LOKAL]:8000
-💡 IP lokal contoh: 192.168.1.15 (cek via ipconfig di Windows atau ifconfig di Mac/Linux)
+## Docs
 
-👥 Tim Pengembang
-Dibuat dengan semangat oleh:
+Dokumentasi teknis lengkap tersedia untuk pengembang:
 
-Faril
-Zhafran
-Dandi
-"Untuk UMKM yang tak punya akuntan, tapi tetap ingin usaha rapi dan berkembang."
+* [Panduan Instalasi](./docs/INSTALL.md)
+* [Dokumentasi API](./docs/API.md)
+* [Struktur Database](./docs/DATABASE.md)
+
+---
+
+## Contribution Guide
+
+Kontribusi terbuka untuk publik. Langkah-langkah untuk berkontribusi:
+
+1.  Fork repository ini.
+2.  Buat branch baru untuk fitur Anda.
+3.  Lakukan commit perubahan.
+4.  Push ke branch Anda.
+5.  Kirimkan Pull Request.
+
+Mohon pastikan kode Anda bersih dan teruji sebelum mengirimkan permintaan.
+
+---
+
+## Attribution (Kontributor)
+
+Proyek ini dibuat dan dikelola oleh tim inti:
+
+* **Faril** - Lead Developer
+* **Zharaf** - Backend Engineer
+* **Dandi** - Frontend Specialist
+
+---
+
+## License
+
+Didistribusikan di bawah Lisensi MIT. Silakan lihat file `LICENSE` untuk informasi lebih lanjut.
 
