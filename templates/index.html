@@ -3,28 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asisten UMKM</title>
+  <title>BIMA -asisten umkm anda</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .bg-3d {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      transform-style: preserve-3d;
-      animation: floatPanels 12s infinite ease-in-out;
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+      transform-style: preserve-3d; animation: floatPanels 12s infinite ease-in-out;
     }
     .panel {
-      position: absolute;
-      width: 250px;
-      height: 250px;
-      background: rgba(255, 255, 255, 0.12);
-      -webkit-backdrop-filter: blur(8px);
-      backdrop-filter: blur(8px);
-      border-radius: 16px;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+      position: absolute; width: 250px; height: 250px;
+      background: rgba(255,255,255,0.12); backdrop-filter: blur(8px);
+      border-radius: 16px; box-shadow: 0 6px 24px rgba(0,0,0,0.08);
       transform: translateZ(-100px) rotateY(25deg) rotateX(15deg);
       animation: panelFloat 8s infinite alternate ease-in-out;
     }
@@ -32,33 +21,28 @@
     .panel:nth-child(2) { top: 25%; right: 10%; transform: translateZ(-180px) rotateY(-20deg) rotateX(10deg); }
     .panel:nth-child(3) { bottom: 20%; left: 15%; transform: translateZ(-120px) rotateY(15deg) rotateX(-20deg); }
     .panel:nth-child(4) { bottom: 10%; right: 15%; transform: translateZ(-220px) rotateY(-10deg) rotateX(25deg); }
-
     @keyframes floatPanels {
-      0%, 100% { transform: translateY(0) rotateX(0); }
+      0%,100% { transform: translateY(0) rotateX(0); }
       50% { transform: translateY(-8px) rotateX(0.5deg); }
     }
     @keyframes panelFloat {
       0% { transform: translateZ(-100px) rotateY(25deg) rotateX(15deg); }
       100% { transform: translateZ(-100px) rotateY(-25deg) rotateX(-15deg); }
     }
-
-    [data-theme="dark"] .bg-3d .panel {
-      background: rgba(0, 0, 0, 0.15);
-    }
+    [data-theme="dark"] .bg-3d .panel { background: rgba(0,0,0,0.15); }
     [data-theme="dark"] .message-ai { background: #1e293b !important; }
     [data-theme="dark"] .message-user { background: #334155 !important; }
-    
-    /* FIX SCROLL */
-    body {
-      overflow: auto !important;
+    .file-preview {
+      font-size: 0.75rem; color: #64748b; margin-top: 4px;
+      max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     }
-    #chatBox {
-      overflow-y: auto !important;
-      overscroll-behavior: contain;
+    @media (max-width: 768px) {
+      #sidebar { display: none; }
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-cyan-100 min-h-screen flex">
+<body class="min-h-screen flex overflow-hidden">
+
   <!-- 3D Background -->
   <div class="bg-3d">
     <div class="panel"></div>
@@ -67,59 +51,92 @@
     <div class="panel"></div>
   </div>
 
-  <!-- SIDEBAR -->
-  <div class="w-72 bg-slate-800/90 text-white flex flex-col backdrop-blur-sm border-r border-slate-700 h-screen">
-    <div class="p-4 border-b border-slate-700 flex justify-between items-center">
-      <h2 class="font-bold">BIMA</h2>
-      <div class="flex gap-2">
-        <button id="newChatBtn" class="text-blue-400 text-sm font-medium">+ New</button>
-        <button id="themeToggle" class="text-lg">🌙</button>
-      </div>
-    </div>
-    <div id="chatList" class="flex-1 p-2 space-y-1 overflow-y-auto"></div>
+  <!-- LANDING PAGE -->
+   <!-- LANDING PAGE -->
+ <div id="landing" class="w-full h-screen flex flex-col items-center justify-center px-6 text-center z-10">
+  <h1 class="text-3xl md:text-4xl font-bold text-blue-600 mb-4">Asisten Keuangan UMKM</h1>
+  <p class="text-gray-700 max-w-md mb-6">Bantu catat keuangan, analisis dokumen, dan pelajari video lokal — semua lewat chat.</p>
+  <div class="mb-6 text-sm text-gray-600 space-y-1">
+    <div>AI powered by <span class="font-semibold text-blue-600">Kolosal</span></div>
+    <div>Developer by <span class="font-semibold">Faril, Zhafran, Dandi</span></div>
   </div>
+  <a href="https://github.com/FARILtau72/BIMAV2" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-full text-sm font-medium hover:bg-gray-900 transition mb-4">
+    <i class="fab fa-github"></i> Lihat di GitHub
+  </a>
+  <button id="startBtn" class="px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition shadow-lg">
+    Mulai Sekarang
+  </button>
+</div>
 
-  <!-- CHAT AREA -->
-  <div class="flex-1 flex flex-col bg-white/90 backdrop-blur-sm h-screen">
-    <div class="p-4 border-b border-gray-200">
-      <div id="chatTitle" class="font-semibold text-blue-700 cursor-pointer max-w-xs truncate">New Chat</div>
+
+  <!-- APP (CHAT UI) -->
+  <div id="app" class="hidden w-full h-screen flex">
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="w-72 bg-slate-800/90 text-white flex flex-col backdrop-blur-sm border-r border-slate-700 h-screen">
+      <div class="p-4 border-b border-slate-700 flex justify-between items-center">
+        <h2 class="font-bold">BIMA</h2>
+        <div class="flex gap-2">
+          <button id="newChatBtn" class="text-blue-400 text-sm font-medium">+ New</button>
+          <button id="themeToggle" class="text-lg">🌙</button>
+        </div>
+      </div>
+      <div id="chatList" class="flex-1 p-2 space-y-1 overflow-y-auto"></div>
     </div>
-    <div id="chatBox" class="flex-1 p-5 space-y-4 overflow-y-auto"></div>
-    <div class="p-4 border-t border-gray-200">
-      <div class="flex gap-2">
-        <input type="text" id="msgInput" placeholder="Ketik pesan..." class="flex-1 border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300" />
-        <input type="file" id="fileInput" accept=".pdf,.png,.jpg,.jpeg" class="hidden" />
-        <button id="fileBtn" class="w-10 h-10 rounded-full bg-blue-50 text-blue-600">📎</button>
-        <button id="sendBtn" class="w-10 h-10 rounded-full bg-blue-600 text-white">➤</button>
+
+    <!-- MOBILE MENU -->
+    <button id="mobileMenuBtn" class="md:hidden absolute top-4 left-4 z-20 bg-slate-800/80 text-white p-2 rounded-full">☰</button>
+
+    <!-- CHAT AREA -->
+    <div class="flex-1 flex flex-col bg-white/90 backdrop-blur-sm h-screen">
+      <div class="p-4 border-b border-gray-200 dark:border-gray-700">
+        <div id="chatTitle" class="font-semibold text-blue-700 dark:text-blue-400 cursor-pointer max-w-xs truncate">New Chat</div>
+      </div>
+      <div id="chatBox" class="flex-1 p-5 space-y-4 overflow-y-auto"></div>
+      <div class="p-4 border-t border-gray-200 dark:border-gray-700">
+        <div id="filePreview" class="file-preview hidden"></div>
+        <div class="flex gap-2 mt-1">
+          <input type="text" id="msgInput" placeholder="Ketik pesan..." class="flex-1 border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-800 dark:text-white" />
+          <input type="file" id="fileInput" accept=".pdf,.png,.jpg,.jpeg,.mp4" class="hidden" />
+          <button id="fileBtn" class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-900 dark:text-blue-200">📎</button>
+          <button id="sendBtn" class="w-10 h-10 rounded-full bg-blue-600 text-white">➤</button>
+        </div>
       </div>
     </div>
   </div>
 
   <script>
-    // === DATA ===
     let chats = JSON.parse(localStorage.getItem('chats')) || [];
     let currentId = null;
 
-    // === UTILS ===
+    const fileInput = document.getElementById('fileInput');
+    const filePreview = document.getElementById('filePreview');
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files[0]) {
+        filePreview.textContent = `📄 ${fileInput.files[0].name}`;
+        filePreview.classList.remove('hidden');
+      }
+    });
+
     const save = () => localStorage.setItem('chats', JSON.stringify(chats));
     const genId = () => Date.now().toString(36) + Math.random().toString(36).substr(2);
-    const fmtDate = d => {
-      const diff = (Date.now() - new Date(d)) / (1000 * 60 * 60 * 24);
-      return diff < 1 ? 'Today' : diff < 2 ? 'Yesterday' : diff < 7 ? 'Last week' : 'Older';
+
+    const addMsg = (role, txt) => {
+      const div = document.createElement('div');
+      div.className = `max-w-[80%] p-3 rounded-2xl ${role === 'user' ? 'ml-auto bg-blue-100 message-user' : 'bg-gray-100 message-ai'}`;
+      div.innerHTML = txt.replace(/\n/g, '<br>');
+      document.getElementById('chatBox').appendChild(div);
+      document.getElementById('chatBox').scrollTop = document.getElementById('chatBox').scrollHeight;
     };
 
-    // === RENDER ===
     const renderList = () => {
       const el = document.getElementById('chatList');
       el.innerHTML = '';
-
       const groups = {};
       chats.forEach(c => {
-        const key = fmtDate(c.created);
+        const key = (Date.now() - new Date(c.created)) / (1000 * 60 * 60 * 24) < 1 ? 'Today' : (Date.now() - new Date(c.created)) / (1000 * 60 * 60 * 24) < 2 ? 'Yesterday' : (Date.now() - new Date(c.created)) / (1000 * 60 * 60 * 24) < 7 ? 'Last week' : 'Older';
         groups[key] = groups[key] || [];
         groups[key].push(c);
       });
-
       Object.entries(groups).forEach(([date, list]) => {
         el.innerHTML += `<div class="px-3 py-1 text-slate-400 text-xs">${date}</div>`;
         list.forEach(c => {
@@ -127,37 +144,21 @@
           el.innerHTML += `
             <div class="p-2 rounded cursor-pointer ${active}" data-id="${c.id}">
               <div class="truncate text-sm">${c.title || 'New Chat'}</div>
-              <div class="text-xs text-slate-500">${new Date(c.created).toLocaleTimeString()}</div>
-            </div>
-          `;
+              <div class="text-xs text-slate-500">${new Date(c.created).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
+            </div>`;
         });
       });
-
-      el.querySelectorAll('div[data-id]').forEach(el => {
-        el.addEventListener('click', () => loadChat(el.dataset.id));
-      });
-    };
-
-    const addMsg = (role, txt) => {
-      const div = document.createElement('div');
-      div.className = `max-w-[80%] p-3 rounded-2xl ${role === 'user' ? 'ml-auto bg-blue-100 message-user' : 'bg-gray-100 message-ai'}`;
-      div.innerHTML = txt.replace(/\n/g, '<br>');
-      document.getElementById('chatBox').appendChild(div);
-      // Auto scroll ke bawah
-      document.getElementById('chatBox').scrollTop = document.getElementById('chatBox').scrollHeight;
+      el.querySelectorAll('div[data-id]').forEach(el => el.addEventListener('click', () => loadChat(el.dataset.id)));
     };
 
     const loadChat = (id) => {
       currentId = id;
       const chat = chats.find(c => c.id === id);
       if (!chat) return;
-      
       document.getElementById('chatTitle').textContent = chat.title || 'New Chat';
       document.getElementById('chatBox').innerHTML = '';
       chat.msgs.forEach(m => addMsg(m.role, m.txt));
-      
       renderList();
-      // Pastikan scroll ke bawah setelah muat
       document.getElementById('chatBox').scrollTop = document.getElementById('chatBox').scrollHeight;
     };
 
@@ -170,16 +171,14 @@
       renderList();
     };
 
-    // === SEND MESSAGE ===
     const sendMsg = async () => {
       const txt = document.getElementById('msgInput').value.trim();
-      const file = document.getElementById('fileInput').files[0];
+      const file = fileInput.files[0];
       if (!txt && !file) return;
 
       let userTxt = txt || '[File dikirim]';
       if (file) userTxt += ` (📄 ${file.name})`;
       addMsg('user', userTxt);
-
       addMsg('ai', 'Menganalisis...');
 
       const fd = new FormData();
@@ -189,7 +188,6 @@
       try {
         const res = await fetch('/api/chat', { method: 'POST', body: fd });
         const data = await res.json();
-        
         document.getElementById('chatBox').lastElementChild.remove();
         addMsg('ai', data.reply);
 
@@ -209,32 +207,45 @@
       }
 
       document.getElementById('msgInput').value = '';
-      document.getElementById('fileInput').value = '';
+      fileInput.value = '';
+      filePreview.classList.add('hidden');
     };
 
-    // === TOGGLE THEME ===
     const toggleTheme = () => {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
       const newTheme = isDark ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
-      document.getElementById('themeToggle').textContent = isDark ? '🌙' : '☀️';
-      document.body.className = newTheme === 'dark' 
-        ? 'bg-gradient-to-br from-slate-900 to-slate-800 min-h-screen flex' 
-        : 'bg-gradient-to-br from-blue-50 to-cyan-100 min-h-screen flex';
+      document.getElementById('themeToggle').textContent = isDark ? '☀️' : '🌙';
+      document.body.className = newTheme === 'dark'
+        ? 'min-h-screen flex overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800'
+        : 'min-h-screen flex overflow-hidden bg-gradient-to-br from-blue-50 to-cyan-100';
     };
 
-    // === INIT ===
+    document.getElementById('startBtn').addEventListener('click', () => {
+      document.getElementById('landing').classList.add('hidden');
+      document.getElementById('app').classList.remove('hidden');
+      if (chats.length === 0) newChat(); else {
+        currentId = chats[0].id;
+        loadChat(currentId);
+      }
+      renderList();
+    });
+
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('hidden');
+    });
+
     document.getElementById('newChatBtn').addEventListener('click', newChat);
     document.getElementById('sendBtn').addEventListener('click', sendMsg);
-    document.getElementById('fileBtn').addEventListener('click', () => document.getElementById('fileInput').click());
+    document.getElementById('fileBtn').addEventListener('click', () => fileInput.click());
     document.getElementById('msgInput').addEventListener('keypress', e => e.key === 'Enter' && sendMsg());
     document.getElementById('themeToggle').addEventListener('click', toggleTheme);
     document.getElementById('chatTitle').addEventListener('click', () => {
       const chat = chats.find(c => c.id === currentId);
       if (chat) {
         const newTitle = prompt('Ganti nama:', chat.title);
-        if (newTitle && newTitle.trim()) {
+        if (newTitle?.trim()) {
           chat.title = newTitle.trim();
           document.getElementById('chatTitle').textContent = newTitle.trim();
           save();
@@ -243,22 +254,14 @@
       }
     });
 
-    // Load saved theme
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
     document.getElementById('themeToggle').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
-    document.body.className = savedTheme === 'dark' 
-      ? 'bg-gradient-to-br from-slate-900 to-slate-800 min-h-screen flex' 
-      : 'bg-gradient-to-br from-blue-50 to-cyan-100 min-h-screen flex';
+    document.body.className = savedTheme === 'dark'
+      ? 'min-h-screen flex overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800'
+      : 'min-h-screen flex overflow-hidden bg-gradient-to-br from-blue-50 to-cyan-100';
 
-    // Load first chat
-    if (chats.length === 0) newChat();
-    else {
-      currentId = chats[0].id;
-      loadChat(currentId);
-    }
-    renderList();
+    // Init (no auto-load chat on landing)
   </script>
 </body>
 </html>
-
