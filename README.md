@@ -1,13 +1,13 @@
 <div align="center">
 
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3200&pause=600&color=00C896&center=true&vCenter=true&width=620&lines=BIMAV2+%7C+Chatbot+UMKM+Pintar;Ditenagai+oleh+Kolosal+%2B+Claude;Oleh+Faril%2C+Zhafran%2C+Dandi" alt="BIMAV2" />
+  <img src="https://readme-typing-svg.demolab.com  ?font=Fira+Code&size=26&duration=3200&pause=600&color=00C896&center=true&vCenter=true&width=620&lines=BIMAV2+%7C+Chatbot+UMKM+Pintar;Ditenagai+oleh+Kolosal+%2B+Claude;Oleh+Faril%2C+Zhafran%2C+Dandi" alt="BIMAV2" />
 
   <br><br>
 
-  <img src="https://img.shields.io/badge/Kolosal%20AI-Claude%20Sonnet%204.5-FF6B35?style=for-the-badge&logo=anthropic" />
-  <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwind-css" />
-  <img src="https://img.shields.io/badge/No%20PWA-Pure%20Web-8B5CF6?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Mobile%20Ready-✅-10B981?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Kolosal%20AI-Claude%20Sonnet%204.5-FF6B35?style=for-the-badge&logo=anthropic  " />
+  <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwind-css  " />
+  <img src="https://img.shields.io/badge/No%20PWA-Pure%20Web-8B5CF6?style=for-the-badge  " />
+  <img src="https://img.shields.io/badge/Mobile%20Ready  -✅-10B981?style=for-the-badge" />
 
   <br><br>
 
@@ -27,7 +27,7 @@ Ikuti instruksi ini untuk menjalankan proyek di komputer lokal.
 
 1.  Clone repository:
     ```bash
-    git clone [https://github.com/FARILtau72/BIMAV2.git](https://github.com/FARILtau72/BIMAV2.git)
+    git clone [https://github.com/FARILtau72/BIMAV2.git  ](https://github.com/FARILtau72/BIMAV2.git  )
     ```
 
 2.  Masuk ke folder:
@@ -51,7 +51,7 @@ Ikuti instruksi ini untuk menjalankan proyek di komputer lokal.
 
 Berikut adalah demonstrasi tampilan antarmuka BIMAV2.
 
-<img width="1822" height="1024" alt="Screenshot 2025-12-05 100618" src="https://github.com/user-attachments/assets/29da891c-1486-47d7-b20c-fa9efb1ba658" />
+<img width="1822" height="1024" alt="Screenshot 2025-12-05 100618" src="https://github.com/user-attachments/assets/29da891c-1486-47d7-b20c-fa9efb1ba658  " />
 
 67
 
@@ -105,3 +105,4 @@ Proyek ini dibuat dan dikelola oleh tim inti:
 
 Didistribusikan di bawah Lisensi MIT. Silakan lihat file `LICENSE` untuk informasi lebih lanjut.
 
+ rapihin readme nya donkk ( anti emoji)
