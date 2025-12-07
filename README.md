@@ -43,6 +43,8 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek di komputer lokal.
    ```bash
    python app.py
 
+   <br> <br>
+
    DEMO
     GAMBAR ( FOTO )
    <img width="1822" height="1024" alt="Screenshot 2025-12-05 100618" src="https://github.com/user-attachments/assets/f17359cb-54e4-4e89-a155-a85df5c2459e" />
