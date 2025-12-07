@@ -43,4 +43,37 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek di komputer lokal.
    ```bash
    python app.py
 
-   DEMO 
+   DEMO
+
+   GAMBAR ( FOTO )
+   <img width="1822" height="1024" alt="Screenshot 2025-12-05 100618" src="https://github.com/user-attachments/assets/f17359cb-54e4-4e89-a155-a85df5c2459e" />
+   VIDEO ( YOUTUBE )
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/_OUyrSo1K0I?si=Bf2x4mRCQvo2bZfb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> ( VIDEO PROMOSI )
+
+
+   Fitur Utama
+1.Integrasi Python: Backend yang efisien untuk pemrosesan data
+2.Antarmuka HTML/CSS: Desain frontend yang responsif dan ringan
+3.Struktur Modular: Kode yang terorganisir untuk memudahkan pengembangan
+4.Log Sistem: Pencatatan aktivitas sistem secara real-time
+
+Panduan Kontribusi
+Kontribusi dari publik sangat diterima. Ikuti langkah-langkah berikut:
+
+1.Fork repository ini
+2.Buat branch baru untuk fitur yang akan dikembangkan
+3.Lakukan commit terhadap perubahan Anda
+4.Push branch tersebut ke repository Anda
+5.Kirim Pull Request
+6.Pastikan kode Anda bersih, terdokumentasi dengan baik, dan telah diuji sebelum mengirimkan permintaan.
+
+Tim Pengembang
+Proyek ini dikembangkan oleh tim inti berikut:
+
+Faril – Fullstack developer
+Zhafran – product manager
+Dandi – KANG DEPLOY
+
+
+
+
