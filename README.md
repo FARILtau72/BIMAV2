@@ -1,108 +1,45 @@
+# BIMAV2 — Chatbot UMKM Pintar
+
 <div align="center">
 
-  <img src="https://readme-typing-svg.demolab.com  ?font=Fira+Code&size=26&duration=3200&pause=600&color=00C896&center=true&vCenter=true&width=620&lines=BIMAV2+%7C+Chatbot+UMKM+Pintar;Ditenagai+oleh+Kolosal+%2B+Claude;Oleh+Faril%2C+Zhafran%2C+Dandi" alt="BIMAV2" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3200&pause=600&color=00C896&center=true&vCenter=true&width=620&lines=BIMAV2+%7C+Chatbot+UMKM+Pintar;Ditenagai+oleh+Kolosal+%2B+Claude;Oleh+Faril%2C+Zhafran%2C+Dandi" alt="BIMAV2" />
 
   <br><br>
 
-  <img src="https://img.shields.io/badge/Kolosal%20AI-Claude%20Sonnet%204.5-FF6B35?style=for-the-badge&logo=anthropic  " />
-  <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwind-css  " />
-  <img src="https://img.shields.io/badge/No%20PWA-Pure%20Web-8B5CF6?style=for-the-badge  " />
-  <img src="https://img.shields.io/badge/Mobile%20Ready  -✅-10B981?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Kolosal%20AI-Claude%20Sonnet%204.5-FF6B35?style=for-the-badge&logo=anthropic" />
+  <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwind-css" />
+  <img src="https://img.shields.io/badge/No%20PWA-Pure%20Web-8B5CF6?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Mobile%20Ready-%E2%9C%85-10B981?style=for-the-badge" />
 
-  <br><br>
-
+</div>
 
 ---
 
 ## Quickstart
 
-Ikuti instruksi ini untuk menjalankan proyek di komputer lokal.
+Ikuti langkah-langkah berikut untuk menjalankan proyek di komputer lokal.
 
-**Prasyarat**
+### Prasyarat
 
-* Python 3.8 atau lebih baru
-* Pip (Package Installer for Python)
+- Python 3.8 atau lebih baru  
+- Pip (Package Installer for Python)
 
-**Instalasi**
+### Instalasi
 
-1.  Clone repository:
-    ```bash
-    git clone [https://github.com/FARILtau72/BIMAV2.git  ](https://github.com/FARILtau72/BIMAV2.git  )
-    ```
+1. Clone repository:
+   ```bash
+   git clone https://github.com/FARILtau72/BIMAV2.git
 
-2.  Masuk ke folder:
-    ```bash
-    cd BIMAV2
-    ```
+2. Masuk ke direktory proyek
+   ```bash
+   cd BIMAV2
 
-3.  Instal kebutuhan sistem:
-    ```bash
-    pip install -r requirements.txt
-    ```
+3. install depedensi
+   ```bash
+   pip -r requirements
 
-4.  Jalankan aplikasi:
-    ```bash
-    python main.py
-    ```
+4. menjankan aplikasi
+   ```bash
+   python app.py
 
----
-
-## Screenshot / Short Video Gif Demo
-
-Berikut adalah demonstrasi tampilan antarmuka BIMAV2.
-
-<img width="1822" height="1024" alt="Screenshot 2025-12-05 100618" src="https://github.com/user-attachments/assets/29da891c-1486-47d7-b20c-fa9efb1ba658  " />
-
-67
-
-
----
-
-## Feature List
-
-* **Integrasi Python:** Backend yang efisien untuk pemrosesan data.
-* **Antarmuka HTML/CSS:** Desain frontend yang responsif dan ringan.
-* **Struktur Modular:** Kode yang terorganisir untuk kemudahan pengembangan.
-* **Log Sistem:** Pencatatan aktivitas sistem secara real-time.
-
----
-
-## Docs
-
-Dokumentasi teknis lengkap tersedia untuk pengembang:
-
-* [Panduan Instalasi](./docs/INSTALL.md)
-* [Dokumentasi API](./docs/API.md)
-* [Struktur Database](./docs/DATABASE.md)
-
----
-
-## Contribution Guide
-
-Kontribusi terbuka untuk publik. Langkah-langkah untuk berkontribusi:
-
-1.  Fork repository ini.
-2.  Buat branch baru untuk fitur Anda.
-3.  Lakukan commit perubahan.
-4.  Push ke branch Anda.
-5.  Kirimkan Pull Request.
-
-Mohon pastikan kode Anda bersih dan teruji sebelum mengirimkan permintaan.
-
----
-
-## Attribution (Kontributor)
-
-Proyek ini dibuat dan dikelola oleh tim inti:
-
-* **Faril** - Lead Developer
-* **Zharaf** - Backend Engineer
-* **Dandi** - Frontend Specialist
-
----
-
-## License
-
-Didistribusikan di bawah Lisensi MIT. Silakan lihat file `LICENSE` untuk informasi lebih lanjut.
-
- rapihin readme nya donkk ( anti emoji)
+   DEMO 
