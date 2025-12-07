@@ -23,6 +23,7 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek di komputer lokal.
 
 - Python 3.8 atau lebih baru  
 - Pip (Package Installer for Python)
+- API KOLOSAL AI ( CLAUDE SONNET 4.5 ) ( KALO MAU JALAN )
 
 ### Instalasi
 
