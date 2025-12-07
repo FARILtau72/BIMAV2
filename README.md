@@ -1,33 +1,7 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
   <title>BIMAV2 — Chatbot UMKM Pintar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      line-height: 1.6;
-    }
-    code {
-      font-family: 'Fira Code', monospace;
-    }
-    .typing-svg {
-      margin: 1.5rem 0;
-    }
-    .badge-container {
-      margin: 1.5rem 0;
-    }
-    img.demo {
-      max-width: 100%;
-      height: auto;
-      border-radius: 0.5rem;
-      margin: 1rem 0;
-    }
-  </style>
-</head>
+ 
 <body class="bg-white text-gray-800 p-6 max-w-4xl mx-auto">
   
   <div class="text-center">
