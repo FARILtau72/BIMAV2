@@ -2,11 +2,19 @@
 <html lang="id" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>BIMA - Asisten UMKM Anda</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
+    /* Safe Area untuk Notch */
+    body {
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+
     .bg-3d {
       position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
       transform-style: preserve-3d; animation: floatPanels 12s infinite ease-in-out;
@@ -37,7 +45,9 @@
       font-size: 0.75rem; color: #64748b; margin-top: 4px;
       max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     }
-    @media (max-width: 768px) {
+
+    /* Mobile First Responsive */
+    @media (max-width: 414px) {
       #sidebar {
         display: none;
         position: fixed;
@@ -63,10 +73,39 @@
       .mobile-overlay.active {
         display: block;
       }
+
+      /* Input lebih besar di mobile kecil */
+      #msgInput {
+        font-size: 1rem !important;
+        padding: 0.75rem 1rem !important;
+      }
+
+      /* Title chat lebih pendek */
+      #chatTitle {
+        max-width: 120px !important;
+      }
+
+      /* Padding lebih longgar */
+      #chatBox {
+        padding: 1rem !important;
+      }
+    }
+
+    /* Tablet / Desktop */
+    @media (min-width: 768px) {
+      #app {
+        flex-direction: row;
+      }
+      #sidebar {
+        display: flex !important;
+      }
+      #chatArea {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
-<body class="min-h-screen flex overflow-hidden">
+<body class="min-h-screen flex bg-gradient-to-br from-blue-50 to-cyan-100">
   <!-- 3D Background -->
   <div class="bg-3d">
     <div class="panel"></div>
@@ -79,29 +118,29 @@
   <div id="overlay" class="mobile-overlay"></div>
 
   <!-- LANDING PAGE -->
-  <div id="landing" class="w-full h-screen flex flex-col items-center justify-center px-6 text-center z-10">
-    <h1 class="text-3xl md:text-4xl font-bold text-blue-600 mb-4">Asisten Keuangan UMKM</h1>
-    <p class="text-gray-700 max-w-md mb-6">Bantu catat keuangan, analisis dokumen, dan pelajari video lokal — semua lewat chat.</p>
-    <div class="mb-6 text-sm text-gray-600 space-y-1">
+  <div id="landing" class="w-full h-screen flex flex-col items-center justify-center px-4 sm:px-6 text-center z-10">
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 mb-3">Asisten Keuangan UMKM</h1>
+    <p class="text-gray-700 max-w-xs sm:max-w-md mb-5 text-sm sm:text-base">Bantu catat keuangan, analisis dokumen, dan pelajari video lokal — semua lewat chat.</p>
+    <div class="mb-5 text-xs sm:text-sm text-gray-600 space-y-1">
       <div>AI powered by <span class="font-semibold text-blue-600">Kolosal</span></div>
       <div>Developer by <span class="font-semibold">Faril, Zhafran, Dandi</span></div>
     </div>
-    <a href="https://github.com/FARILtau72/BIMAV2" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-full text-sm font-medium hover:bg-gray-900 transition mb-4">
+    <a href="https://github.com/FARILtau72/BIMAV2" target="_blank" class="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-gray-800 text-white rounded-full text-xs sm:text-sm font-medium hover:bg-gray-900 transition mb-3">
       <i class="fab fa-github"></i> Lihat di GitHub
     </a>
-    <button id="startBtn" class="px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition shadow-lg">
+    <button id="startBtn" class="px-5 py-2 sm:px-6 sm:py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition shadow-lg text-sm sm:text-base">
       Mulai Sekarang
     </button>
   </div>
 
   <!-- APP (CHAT UI) -->
-  <div id="app" class="hidden w-full h-screen flex flex-col md:flex-row">
+  <div id="app" class="hidden w-full h-[100dvh] flex flex-col">
     <!-- SIDEBAR -->
-    <div id="sidebar" class="w-72 bg-slate-800/90 text-white flex flex-col backdrop-blur-sm border-r border-slate-700 h-screen">
-      <div class="p-4 border-b border-slate-700 flex justify-between items-center">
+    <div id="sidebar" class="w-72 bg-slate-800/90 text-white flex flex-col backdrop-blur-sm border-r border-slate-700 h-[100dvh]">
+      <div class="p-3 sm:p-4 border-b border-slate-700 flex justify-between items-center">
         <h2 class="font-bold">BIMA</h2>
         <div class="flex gap-2">
-          <button id="newChatBtn" class="text-blue-400 text-sm font-medium">+ New</button>
+          <button id="newChatBtn" class="text-blue-400 text-xs sm:text-sm font-medium">+ New</button>
           <button id="themeToggle" class="text-lg">🌙</button>
         </div>
       </div>
@@ -112,15 +151,15 @@
     <button id="mobileMenuBtn" class="md:hidden absolute top-4 left-4 z-20 bg-slate-800/80 text-white p-2 rounded-full">☰</button>
 
     <!-- CHAT AREA -->
-    <div class="flex-1 flex flex-col bg-white/90 backdrop-blur-sm h-screen">
-      <div class="p-4 border-b border-gray-200 dark:border-gray-700">
+    <div class="flex-1 flex flex-col bg-white/90 backdrop-blur-sm h-[100dvh] max-w-4xl w-full mx-auto">
+      <div class="p-3 sm:p-4 border-b border-gray-200 dark:border-gray-700">
         <div id="chatTitle" class="font-semibold text-blue-700 dark:text-blue-400 cursor-pointer max-w-xs truncate">New Chat</div>
       </div>
-      <div id="chatBox" class="flex-1 p-5 space-y-4 overflow-y-auto"></div>
-      <div class="p-4 border-t border-gray-200 dark:border-gray-700">
+      <div id="chatBox" class="flex-1 p-3 sm:p-5 space-y-3 sm:space-y-4 overflow-y-auto min-h-0"></div>
+      <div class="p-3 sm:p-4 border-t border-gray-200 dark:border-gray-700">
         <div id="filePreview" class="file-preview hidden"></div>
-        <div class="flex gap-2 mt-1">
-          <input type="text" id="msgInput" placeholder="Ketik pesan..." class="flex-1 border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-800 dark:text-white" />
+        <div class="flex gap-1 sm:gap-2 mt-1">
+          <input type="text" id="msgInput" placeholder="Ketik pesan..." class="flex-1 border rounded-full px-3 sm:px-4 py-2 text-base focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-800 dark:text-white" />
           <input type="file" id="fileInput" accept=".pdf,.png,.jpg,.jpeg,.mp4" class="hidden" />
           <button id="fileBtn" class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-900 dark:text-blue-200">📎</button>
           <button id="sendBtn" class="w-10 h-10 rounded-full bg-blue-600 text-white">➤</button>
@@ -149,7 +188,7 @@
 
     const addMsg = (role, txt) => {
       const div = document.createElement('div');
-      div.className = `max-w-[80%] p-3 rounded-2xl ${role === 'user' ? 'ml-auto bg-blue-100 message-user' : 'bg-gray-100 message-ai'}`;
+      div.className = `max-w-[80%] p-2 sm:p-3 rounded-2xl ${role === 'user' ? 'ml-auto bg-blue-100 message-user' : 'bg-gray-100 message-ai'}`;
       div.innerHTML = txt.replace(/\n/g, '<br>');
       document.getElementById('chatBox').appendChild(div);
       document.getElementById('chatBox').scrollTop = document.getElementById('chatBox').scrollHeight;
@@ -264,8 +303,8 @@
     const updateBodyBg = () => {
       const theme = document.documentElement.getAttribute('data-theme');
       document.body.className = theme === 'dark'
-        ? 'min-h-screen flex overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800'
-        : 'min-h-screen flex overflow-hidden bg-gradient-to-br from-blue-50 to-cyan-100';
+        ? 'min-h-screen flex bg-gradient-to-br from-slate-900 to-slate-800'
+        : 'min-h-screen flex bg-gradient-to-br from-blue-50 to-cyan-100';
     };
 
     // ============== MOBILE SIDEBAR ==============
