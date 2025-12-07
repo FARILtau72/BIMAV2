@@ -1,8 +1,6 @@
 
 
-  <title>BIMAV2 — Chatbot UMKM Pintar</title>
- 
-<body class="bg-white text-gray-800 p-6 max-w-4xl mx-auto">
+  
   
   <div class="text-center">
     <img 
@@ -11,13 +9,7 @@
       class="typing-svg"
     />
 
-    <div class="badge-container flex flex-wrap justify-center gap-2">
-      <img src="https://img.shields.io/badge/Kolosal%20AI-Claude%20Sonnet%204.5-FF6B35?style=for-the-badge&logo=anthropic" />
-      <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwind-css" />
-      <img src="https://img.shields.io/badge/No%20PWA-Pure%20Web-8B5CF6?style=for-the-badge" />
-      <img src="https://img.shields.io/badge/Mobile%20Ready-%E2%9C%85-10B981?style=for-the-badge" />
-    </div>
-  </div>
+  
 
   <hr class="my-8 border-gray-300" />
 
