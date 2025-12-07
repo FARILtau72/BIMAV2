@@ -9,7 +9,9 @@
       class="typing-svg"
     />
 
-  
+  LINK DEMO 
+   ```bash
+     https://bima-p4wi.onrender.com
 
   <hr class="my-8 border-gray-300" />
 
