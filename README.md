@@ -44,12 +44,10 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek di komputer lokal.
    python app.py
 
    DEMO
-
-   GAMBAR ( FOTO )
+    GAMBAR ( FOTO )
    <img width="1822" height="1024" alt="Screenshot 2025-12-05 100618" src="https://github.com/user-attachments/assets/f17359cb-54e4-4e89-a155-a85df5c2459e" />
    VIDEO ( YOUTUBE )
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/_OUyrSo1K0I?si=Bf2x4mRCQvo2bZfb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> ( VIDEO PROMOSI )
-
+  https://www.youtube.com/watch?v=_OUyrSo1K0I&feature=youtu.be
 
    Fitur Utama
 1.Integrasi Python: Backend yang efisien untuk pemrosesan data
